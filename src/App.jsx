@@ -1,7 +1,7 @@
-import Tasks from "./components/Tasks";
+import Tasks from "./components/Tasks"
 
 function App() {
-  return <h1>FSC</h1>;
+  return <h1>FSC</h1>
 }
 
-export default App;
+export default App

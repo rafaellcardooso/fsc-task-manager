@@ -1,6 +1,6 @@
-import { useState } from "react";
-import Header from "./Header";
+import { useState } from "react"
+import Header from "./Header"
 
 function Tasks() {}
 
-export default Tasks;
+export default Tasks
