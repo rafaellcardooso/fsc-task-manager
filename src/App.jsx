@@ -1,6 +1,6 @@
-import Tasks from "./components/Tasks"
-
 function App() {
+  const name = "test"
+  console.log(name)
   return <h1>FSC</h1>
 }
 
