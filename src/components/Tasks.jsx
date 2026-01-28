@@ -6,7 +6,7 @@ import MoonIcon from "../assets/icons/moon.svg?react"
 import SunIcon from "../assets/icons/sun.svg?react"
 import TrashIcon from "../assets/icons/trash.svg?react"
 import DATA from "../constants/tasks.js"
-import AddTaskDiaglog from "./AddTaskDialog.jsx"
+import AddTaskDialog from "./AddTaskDialog.jsx"
 import Button from "./Button"
 import TaskItem from "./TaskItem.jsx"
 import TasksSeparator from "./TasksSeparator"
@@ -63,7 +63,7 @@ const Tasks = () => {
             Adicionar Tarefa
           </Button>
 
-          <AddTaskDiaglog
+          <AddTaskDialog
             isOpen={addTaskDialogIsOpen}
             handleClose={() => setAddTaskDialogIsOpen(false)}
           />

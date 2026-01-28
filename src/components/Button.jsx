@@ -9,6 +9,7 @@ const Button = ({
     if (variant === "primary") return "bg-[#00ADB5] text-white"
 
     if (variant === "secondary") return "bg-[#EEEEEE] text-[#35383E]"
+
     if (variant === "ghost") return " text-[#818181]"
   }
 
