@@ -1,15 +1,44 @@
 import "./AddTaskDialog.css"
 
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 import { CSSTransition } from "react-transition-group"
+import { v4 } from "uuid"
 
 import Button from "./Button.jsx"
 import Input from "./Input.jsx"
 import TimeSelect from "./TimeSelect.jsx"
 
-const AddTaskDialog = ({ isOpen, handleClose }) => {
+const AddTaskDialog = ({ isOpen, handleClose, handleSubmit }) => {
+  const [title, setTitle] = useState()
+  const [time, setTime] = useState("morning")
+  const [description, setDescription] = useState()
+
   const nodeRef = useRef()
+
+  useEffect(() => {
+    if (!isOpen) {
+      setTitle("")
+      setTime("morning")
+      setDescription("")
+    }
+  }, [isOpen])
+
+  const handleSaveClick = () => {
+    if (!title.trim() || !time.trim() || !description.trim()) {
+      alert("Por favor, preencha todos os campos.")
+      return
+    }
+
+    handleSubmit({
+      id: v4(),
+      title,
+      time,
+      description,
+      status: "not_started",
+    })
+    handleClose()
+  }
 
   return (
     <CSSTransition
@@ -29,38 +58,51 @@ const AddTaskDialog = ({ isOpen, handleClose }) => {
             <div className="rounded-xl bg-white p-5 text-center shadow">
               <h2 className="text-xl font-semibold text-[#35383E]">
                 Nova tarefa
-                <p className="mb-4 mt-1 text-sm text-[#9A9C9F]">
-                  Insira as informações abaixo
-                </p>
-                <div className="flex w-[#336px] flex-col space-y-4">
-                  <Input
-                    id="title"
-                    label="Título"
-                    placeholder="Insira o título da tarefa"
-                  />
-
-                  <TimeSelect />
-
-                  <Input
-                    id="description"
-                    label="Descrição"
-                    placeholder="Descreva a tarefa"
-                  />
-                  <div className="flex gap-3">
-                    <Button
-                      variant="secondary"
-                      className="w-full"
-                      size="large"
-                      onClick={handleClose}
-                    >
-                      Cancelar
-                    </Button>
-                    <Button className="w-full" size="large">
-                      Salvar
-                    </Button>
-                  </div>
-                </div>
               </h2>
+              <p className="mb-4 mt-1 text-sm text-[#9A9C9F]">
+                Insira as informações abaixo
+              </p>
+              <div className="flex w-[336px] flex-col space-y-4">
+                <Input
+                  id="title"
+                  label="Título"
+                  placeholder="Insira o título da tarefa"
+                  value={title}
+                  onChange={(event) => setTitle(event.target.value)}
+                />
+
+                <TimeSelect
+                  value={time}
+                  onChange={(event) => setTime(event.target.value)}
+                />
+
+                <Input
+                  id="description"
+                  label="Descrição"
+                  placeholder="Descreva a tarefa"
+                  value={description}
+                  onChange={(event) => setDescription(event.target.value)}
+                />
+                <div className="flex gap-3">
+                  <Button
+                    variant="secondary"
+                    className="w-full"
+                    size="large"
+                    onClick={handleClose}
+                  >
+                    Cancelar
+                  </Button>
+                  <Button
+                    className="w-full"
+                    size="large"
+                    onClick={() => {
+                      handleSaveClick()
+                    }}
+                  >
+                    Salvar
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>,
           document.body
