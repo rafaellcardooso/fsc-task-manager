@@ -33,14 +33,17 @@ const Tasks = () => {
       }
 
       if (task.status === "not_started") {
+        toast.success("Tarefa iniciada com sucesso!")
         return { ...task, status: "in_progress" }
       }
 
       if (task.status === "in_progress") {
+        toast.success("Tarefa concluída com sucesso!")
         return { ...task, status: "done" }
       }
 
       if (task.status === "done") {
+        toast.success("Tarefa reiniciada com sucesso!")
         return { ...task, status: "not_started" }
       }
 
@@ -65,7 +68,10 @@ const Tasks = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost">
+          <Button
+            variant="ghost"
+            onClick={() => toast.success("Tarefas limpas com sucesso!")}
+          >
             <TrashIcon />
             Limpar Tarefas
           </Button>
