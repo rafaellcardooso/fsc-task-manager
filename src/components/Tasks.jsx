@@ -71,7 +71,7 @@ const Tasks = () => {
 
         <div className="flex items-center gap-3">
           <Button
-            variant="ghost"
+            color="ghost"
             onClick={() => toast.success("Tarefas limpas com sucesso!")}
           >
             <TrashIcon />
