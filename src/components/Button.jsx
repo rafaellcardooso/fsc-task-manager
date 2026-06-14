@@ -21,6 +21,8 @@ const Button = ({
         small: "py-1 text-xs",
         large: "py-2 text-sm",
       },
+
+      disabled: { true: "opacity-50, cursor-not-allowed, hover:opacity-50" },
     },
 
     defaultVariants: {
@@ -34,6 +36,7 @@ const Button = ({
       className={button({
         color,
         size,
+        disabled: rest.disabled,
         className,
       })}
       {...rest}
