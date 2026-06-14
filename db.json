@@ -43,31 +43,10 @@
       "status": "not_started"
     },
     {
-      "id": "9a78f29d-ab41-4f9a-849d-cd6d52fb228e",
+      "id": "3b3805a5-1f00-4902-b943-3e311bcfec4f",
       "title": "Teste",
       "time": "morning",
       "description": "Teste",
-      "status": "not_started"
-    },
-    {
-      "id": "a13efbb4-7389-49a5-808f-56b632ff5d94",
-      "title": "Teste1",
-      "time": "morning",
-      "description": "Teste1",
-      "status": "not_started"
-    },
-    {
-      "id": "a41493ac-605e-422f-9b59-57bbf359e2b7",
-      "title": "Teste",
-      "time": "morning",
-      "description": "Teste",
-      "status": "not_started"
-    },
-    {
-      "id": "d533a0f0-3977-4de9-b7f5-0b6f185f7d59",
-      "title": "TESTE",
-      "time": "morning",
-      "description": "TESTE",
       "status": "not_started"
     }
   ]
