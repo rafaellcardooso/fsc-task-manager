@@ -10,12 +10,13 @@ const Button = ({
   ...rest
 }) => {
   const button = tv({
-    base: "flex items-center justify-center gap-2 rounded-md font-semibold transition hover:opacity-75",
+    base: "flex items-center justify-center gap-2 rounded-md px-3 font-semibold transition hover:opacity-75",
     variants: {
       color: {
         primary: "bg-brand-primary text-white",
         secondary: "bg-brand-light-gray text-brand-dark-blue",
         ghost: "text-brand-dark-gray",
+        danger: "bg-brand-danger text-brand-white",
       },
       size: {
         small: "py-1 text-xs",
@@ -48,7 +49,7 @@ const Button = ({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(["primary", "ghost", "secondary"]),
+  color: PropTypes.oneOf(["primary", "ghost", "secondary", "danger"]),
   size: PropTypes.oneOf(["small", "large"]),
   className: PropTypes.string,
 }
