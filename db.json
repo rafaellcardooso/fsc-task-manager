@@ -1,25 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "cbdb8d3e-3326-441f-b4bc-64347fc575d9",
-      "title": "",
-      "time": "morning",
-      "description": "Manhã",
-      "status": "not_started"
-    },
-    {
-      "id": "92ad4a11-0816-48e8-bacd-24b8575a3c77",
-      "title": "Tarefa",
-      "time": "afternoon",
-      "description": "Tarefa",
-      "status": "not_started"
-    },
-    {
-      "id": "ed1263f0-49bb-4cdf-ac0f-ddfb1895f9d4",
-      "title": "Noite",
-      "time": "evening",
-      "description": "Noite",
-      "status": "not_started"
-    }
-  ]
+  "tasks": []
 }

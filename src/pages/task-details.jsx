@@ -173,18 +173,17 @@ const TaskDetailsPage = () => {
               />
             </div>
           </div>
-
-          <div className="flex w-full justify-between gap-3">
-            <Button
-              size="large"
-              color="primary"
-              onClick={handleSaveClick}
-              disabled={saveIsLoading}
-            >
-              {saveIsLoading && <LoaderIcon classname="animate-spin" />}
-              Salvar
-            </Button>
-          </div>
+        </div>
+        <div className="flex w-full justify-between gap-3">
+          <Button
+            size="large"
+            color="primary"
+            onClick={handleSaveClick}
+            disabled={saveIsLoading}
+          >
+            {saveIsLoading && <LoaderIcon classname="animate-spin" />}
+            Salvar
+          </Button>
         </div>
       </div>
     </div>
