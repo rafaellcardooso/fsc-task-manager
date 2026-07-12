@@ -57,7 +57,7 @@ const AddTaskDialog = ({
 
     setErrors(newErrors)
 
-    if (errors.length > 0) {
+    if (newErrors.length > 0) {
       return setIsLoading(false)
     }
 
