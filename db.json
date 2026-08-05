@@ -1,3 +1,12 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "INgiRNd-11Y",
+      "title": "Teste2",
+      "time": "morning",
+      "description": "Teste1",
+      "status": "not_started"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
